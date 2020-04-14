@@ -30,6 +30,8 @@ public class Snake implements ActionListener, KeyListener {
     public ArrayList<Point> enemyParts = new ArrayList<Point>();
     Enemy enemyHead;
 
+
+    //ewf
     public static final int UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3, SCALE = 10;
     public int ticks = 0, direction = DOWN, score, tailLength = 10, time, different = 0;
     public Point head, cherry;
