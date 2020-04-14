@@ -55,7 +55,7 @@ public class RenderPanel extends JPanel
 //		g.setColor(ColorMix.colorMixM());	
 //		g.fillRect(snake.cherry.x * Snake.SCALE, snake.cherry.y * Snake.SCALE, 15, 15);
 		String cwd = new File("").getAbsolutePath();
-		String path = cwd + "/Snake/Graphics/der.png";
+		String path = cwd + "/Snake/Graphics/Foot.png";
 		essen = new ImageIcon(path);
 
 		essen.setImage(essen.getImage().getScaledInstance(40,40,Image.SCALE_DEFAULT));

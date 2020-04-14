@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -19,29 +20,21 @@ import javax.swing.Timer;
 public class Snake implements ActionListener, KeyListener {
 
     public static Snake snake; // snake wird in der Main-Methode ein Objekt von Snake zugewiesen;
-
     public JFrame jframe;
-
     public RenderPanel renderPanel;
-
     public Timer timer = new Timer(5, this); // gibt ein delay an und was nach dieser zeit
                                              // ausgeführt werden soll
                                              // this ist ein Objekt (Spielzeit läuft in diesem
                                              // Objekt schon)
     public ArrayList<Point> snakeParts = new ArrayList<Point>();
     public ArrayList<Point> enemyParts = new ArrayList<Point>();
-
-    public static final int UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3, SCALE = 10;
-
-    public int ticks = 0, direction = DOWN, score, tailLength = 10, time, different = 0;
-
-    public Point head, cherry;
     Enemy enemyHead;
 
+    public static final int UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3, SCALE = 10;
+    public int ticks = 0, direction = DOWN, score, tailLength = 10, time, different = 0;
+    public Point head, cherry;
     public Random random;
-
     public boolean over = false, paused, hasntStart = true;
-
     public Dimension dim;
 
     public Snake() // 2
@@ -79,7 +72,7 @@ public class Snake implements ActionListener, KeyListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent arg0) // 4 wird immer aufgerufen wenn was passiert, ALso
+    public void actionPerformed(ActionEvent arg0) // wird immer aufgerufen wenn was passiert, ALso
                                                   // wenn die zeit von Timer abläuft.
     {
         renderPanel.repaint(); // ruf die Methode repaint von JPanel auf

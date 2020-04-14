@@ -5,12 +5,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class ColorMix {
-   
-   
-   
     public static Color colorMixM() {
         
-        Random simon = new Random();
+        Random rand = new Random();
         ArrayList<Color> colorList = new ArrayList<Color>();
         colorList.add(Color.blue);
         colorList.add(Color.CYAN);
@@ -21,10 +18,7 @@ public class ColorMix {
         colorList.add(Color.orange);
         colorList.add(Color.pink);
         colorList.add(Color.red);
-        
-        return colorList.get(simon.nextInt(7));
-       
-        
-       
+
+        return colorList.get(rand.nextInt(7));
     }
 }
